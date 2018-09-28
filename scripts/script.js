@@ -73,3 +73,19 @@ for (let i = 0; i < imghtml.length; i++) {
         imghtml[i].src = imgclic[i]
     });
 }
+
+/** Exercice 4 **/
+
+let paragraph = document.querySelectorAll(".more a")[0];
+const textBaliseA = document.querySelectorAll("#services figcaption p")[0].innerHTML;
+paragraph.addEventListener("click", function() {
+    event.preventDefault();
+    let read = document.querySelectorAll("#services figcaption p")[0];
+    if (paragraph.innerHTML == "Read More »") {
+        read.innerHTML += "ouais ouais ouais ouais ouais ouais"
+        paragraph.innerHTML = "Read Less »"
+    } else {
+        read.innerHTML = textBaliseA
+        paragraph.innerHTML = "Read More »"
+    }
+})
